@@ -14,17 +14,12 @@ public class stdHuffman {
             newLine.add(node);
         }
         Node node = new Node();
-       // System.out.println(input.size()-2);
         node.proibability=input.get(input.size()-2).proibability+input.get(input.size()-1).proibability;
         node.symbol=input.get(input.size()-2).symbol+"+"+input.get(input.size()-1).symbol;
         newLine.add(node);
-
-
-
         return newLine;
-
-
     }
+    
     private   ArrayList<Node> orderList (ArrayList <Node> input){
 
         for (int i = 1; i <input.size() ; i++) {
@@ -41,9 +36,11 @@ public class stdHuffman {
         }
         return input;
     }
+    
     public  ArrayList<Node> returnTable (){
         return table;
     }
+    
     public ArrayList<ArrayList<Node>> getOuterList(String linearTable){
         ArrayList<ArrayList<Node>> outerList = new ArrayList<>();
        ArrayList<Node> oneColumn = new ArrayList<>();
